@@ -5,7 +5,7 @@ const db = require("./database.js");
 const fs = require('fs');
 const app = express()
 
-var argument = minimist(process.argv.slice(2));
+var args = minimist(process.argv.slice(2));
 var allowedName = 'port';
 const HTTP_PORT = argument[allowedName] || 5555;
 
