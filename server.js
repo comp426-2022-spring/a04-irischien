@@ -7,7 +7,7 @@ const app = express()
 
 var args = minimist(process.argv.slice(2));
 var allowedName = 'port';
-const HTTP_PORT = argument[allowedName] || 5555;
+const HTTP_PORT = args[allowedName] || 5555;
 
 // Make Express use its own built-in body parser for both urlencoded and JSON body data.
 app.use(express.urlencoded({ extended: true }));
