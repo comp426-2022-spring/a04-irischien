@@ -41,7 +41,7 @@ if (args.help || args.h) {
     process.exit(0)
 }
 // create log file
-if (log == true) {
+if (args['log'] == true) {
     const WRITESTREAM = fs.createWriteStream('FILE', { flags: 'a' })
     app.use(morgan('combined', { stream: WRITESTREAM }))
 } 
